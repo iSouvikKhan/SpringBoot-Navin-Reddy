@@ -14,6 +14,6 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String Greet(HttpServletRequest request) {
-        return "hello world || SessionID = " + request.getSession().getId();
+        return "hello world || Current SessionID = " + request.getSession().getId();
     }
 }
