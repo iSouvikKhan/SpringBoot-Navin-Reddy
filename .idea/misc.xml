@@ -7,6 +7,10 @@
         <option value="$PROJECT_DIR$/JobApp-Project/pom.xml" />
         <option value="$PROJECT_DIR$/spring-sec-demo/pom.xml" />
         <option value="$PROJECT_DIR$/Secure-Job-App/pom.xml" />
+        <option value="$PROJECT_DIR$/JWT/pom.xml" />
+        <option value="$PROJECT_DIR$/security/JWT/pom.xml" />
+        <option value="$PROJECT_DIR$/security/spring-sec-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/OAuth/SpringOAuth/pom.xml" />
       </list>
     </option>
   </component>
