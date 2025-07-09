@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47e42896-aacb-447f-b903-914143b04a23" name="Changes" comment="changes">
+    <list default="true" id="47e42896-aacb-447f-b903-914143b04a23" name="Changes" comment="findByCategoryIgnoreCase()">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Quiz App/quizappmonolith/src/main/java/com/telusko/quizappmonolith/controller/QuestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Quiz App/quizappmonolith/src/main/java/com/telusko/quizappmonolith/controller/QuestionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quiz App/quizappmonolith/src/main/java/com/telusko/quizappmonolith/dao/QuestionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Quiz App/quizappmonolith/src/main/java/com/telusko/quizappmonolith/dao/QuestionDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quiz App/quizappmonolith/src/main/java/com/telusko/quizappmonolith/model/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/Quiz App/quizappmonolith/src/main/java/com/telusko/quizappmonolith/model/Question.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Quiz App/quizappmonolith/src/main/java/com/telusko/quizappmonolith/service/QuestionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Quiz App/quizappmonolith/src/main/java/com/telusko/quizappmonolith/service/QuestionService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -120,12 +118,21 @@
       <option name="project" value="LOCAL" />
       <updated>1752083863102</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="findByCategoryIgnoreCase()">
+      <option name="closed" value="true" />
+      <created>1752092848371</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1752092848371</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="created findAll() questions endpoint" />
     <MESSAGE value="changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes" />
+    <MESSAGE value="findByCategoryIgnoreCase()" />
+    <option name="LAST_COMMIT_MESSAGE" value="findByCategoryIgnoreCase()" />
   </component>
 </project>

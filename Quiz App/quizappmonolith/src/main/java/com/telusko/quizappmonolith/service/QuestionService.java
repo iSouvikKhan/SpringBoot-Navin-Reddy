@@ -20,4 +20,8 @@ public class QuestionService {
     public List<Question> getQuestionByCategory(String category) {
         return questionDao.findByCategoryIgnoreCase(category);
     }
+
+    public void addQuestion(Question question) {
+        questionDao.save(question);
+    }
 }
