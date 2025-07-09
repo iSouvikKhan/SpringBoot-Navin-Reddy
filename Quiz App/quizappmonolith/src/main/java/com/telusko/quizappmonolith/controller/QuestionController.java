@@ -3,6 +3,8 @@ package com.telusko.quizappmonolith.controller;
 import com.telusko.quizappmonolith.model.Question;
 import com.telusko.quizappmonolith.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -24,9 +26,14 @@ public class QuestionController {
         return questionService.getQuestionByCategory(category);
     }
 
-    @PostMapping("add")
-    public String addQuestion(@RequestBody Question question) {
-        questionService.addQuestion(question);
-        return "Success";
+    @PostMapping("/add")
+    public ResponseEntity<String> addQuestion(@RequestBody Question question) {
+        try {
+            Question ques = questionService.addQuestion(question);
+            if(ques != null) return new ResponseEntity<>("Question added successfully", HttpStatus.CREATED);
+            else return new ResponseEntity<>("Failed to add question", HttpStatus.BAD_REQUEST);
+        } catch (Exception e) {
+            return new ResponseEntity<>("Failed to add question", HttpStatus.BAD_REQUEST);
+        }
     }
 }
