@@ -13,12 +13,22 @@
         <module name="spring-boot-rest" />
         <module name="SpringOAuth" />
       </profile>
+      <profile name="Annotation profile for quizappmonolith" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
+        </processorPath>
+        <module name="quizappmonolith" />
+      </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="JobApp" options="-parameters" />
       <module name="SpringOAuth" options="-parameters" />
+      <module name="quizappmonolith" options="-parameters" />
       <module name="spring-boot-rest" options="-parameters" />
       <module name="spring-sec-demo" options="-parameters" />
       <module name="spring-sec-demo (1)" options="-parameters" />
