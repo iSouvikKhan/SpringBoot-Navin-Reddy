@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47e42896-aacb-447f-b903-914143b04a23" name="Changes" comment="addQuestion()">
-      <change afterPath="$PROJECT_DIR$/Quiz App/quizappmonolith/src/main/java/com/telusko/quizappmonolith/controller/QuizController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Quiz App/quizappmonolith/src/main/java/com/telusko/quizappmonolith/dao/QuizDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Quiz App/quizappmonolith/src/main/java/com/telusko/quizappmonolith/dto/QuestionWrapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Quiz App/quizappmonolith/src/main/java/com/telusko/quizappmonolith/dto/QuizResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Quiz App/quizappmonolith/src/main/java/com/telusko/quizappmonolith/model/Quiz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Quiz App/quizappmonolith/src/main/java/com/telusko/quizappmonolith/service/QuizService.java" afterDir="false" />
+    <list default="true" id="47e42896-aacb-447f-b903-914143b04a23" name="Changes" comment="create and submit quiz">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quiz App/quizappmonolith/src/main/java/com/telusko/quizappmonolith/controller/QuestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Quiz App/quizappmonolith/src/main/java/com/telusko/quizappmonolith/controller/QuestionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quiz App/quizappmonolith/src/main/java/com/telusko/quizappmonolith/dao/QuestionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Quiz App/quizappmonolith/src/main/java/com/telusko/quizappmonolith/dao/QuestionDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quiz App/quizappmonolith/src/main/java/com/telusko/quizappmonolith/service/QuestionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Quiz App/quizappmonolith/src/main/java/com/telusko/quizappmonolith/service/QuestionService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +139,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752093681680</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="create and submit quiz">
+      <option name="closed" value="true" />
+      <created>1752102768826</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1752102768826</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -156,6 +155,7 @@
     <MESSAGE value="changes" />
     <MESSAGE value="findByCategoryIgnoreCase()" />
     <MESSAGE value="addQuestion()" />
-    <option name="LAST_COMMIT_MESSAGE" value="addQuestion()" />
+    <MESSAGE value="create and submit quiz" />
+    <option name="LAST_COMMIT_MESSAGE" value="create and submit quiz" />
   </component>
 </project>
