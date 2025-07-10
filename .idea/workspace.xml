@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47e42896-aacb-447f-b903-914143b04a23" name="Changes" comment="started with microservices">
-      <change afterPath="$PROJECT_DIR$/Quiz App/Distributed Quiz App/question-service/src/main/java/com/telusko/question_service/controller/QuestionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Quiz App/Distributed Quiz App/question-service/src/main/java/com/telusko/question_service/dao/QuestionDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Quiz App/Distributed Quiz App/question-service/src/main/java/com/telusko/question_service/dto/QuestionWrapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Quiz App/Distributed Quiz App/question-service/src/main/java/com/telusko/question_service/dto/QuizResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Quiz App/Distributed Quiz App/question-service/src/main/java/com/telusko/question_service/model/Question.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Quiz App/Distributed Quiz App/question-service/src/main/java/com/telusko/question_service/model/Quiz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Quiz App/Distributed Quiz App/question-service/src/main/java/com/telusko/question_service/service/QuestionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quiz App/Distributed Quiz App/question-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Quiz App/Distributed Quiz App/question-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quiz App/Distributed Quiz App/question-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Quiz App/Distributed Quiz App/question-service/src/main/resources/application.properties" afterDir="false" />
-    </list>
+    <list default="true" id="47e42896-aacb-447f-b903-914143b04a23" name="Changes" comment="added boiler plate code" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -164,7 +153,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752182145366</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added boiler plate code">
+      <option name="closed" value="true" />
+      <created>1752183302801</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1752183302801</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -174,6 +171,7 @@
     <MESSAGE value="addQuestion()" />
     <MESSAGE value="create and submit quiz" />
     <MESSAGE value="started with microservices" />
-    <option name="LAST_COMMIT_MESSAGE" value="started with microservices" />
+    <MESSAGE value="added boiler plate code" />
+    <option name="LAST_COMMIT_MESSAGE" value="added boiler plate code" />
   </component>
 </project>
