@@ -1,6 +1,8 @@
 package com.telusko.question_service.controller;
 
 
+import com.telusko.question_service.dto.QuestionWrapper;
+import com.telusko.question_service.dto.QuizResponse;
 import com.telusko.question_service.model.Question;
 import com.telusko.question_service.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,6 +37,38 @@ public class QuestionController {
             else return new ResponseEntity<>("Failed to add question", HttpStatus.BAD_REQUEST);
         } catch (Exception e) {
             return new ResponseEntity<>("Failed to add question", HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @GetMapping("generate")
+    public ResponseEntity<List<Integer>> getQuestionsForQuiz(@RequestParam String categoryName, @RequestParam Integer numQ) {
+        try {
+            List<Integer> ans = questionService.getQuestionsForQuiz(categoryName, numQ);
+            if(ans != null) return new ResponseEntity<>(ans, HttpStatus.OK);
+            else return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
+        } catch (Exception e) {
+            return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @PostMapping("getQuestions")
+    public ResponseEntity<List<QuestionWrapper>> getQuestionsFromId(@RequestBody List<Integer> questionIds) {
+        try {
+            List<QuestionWrapper> ans = questionService.getQuestionsFromId(questionIds);
+            if(ans != null) return new ResponseEntity<>(ans, HttpStatus.OK);
+            else return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
+        } catch (Exception e) {
+            return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    public ResponseEntity<Integer> getScore(@RequestBody List<QuizResponse> responses) {
+        try {
+            Integer ans = questionService.getScore(responses);
+            if(ans != null) return new ResponseEntity<>(ans, HttpStatus.OK);
+            else return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
+        } catch (Exception e) {
+            return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
         }
     }
 }
