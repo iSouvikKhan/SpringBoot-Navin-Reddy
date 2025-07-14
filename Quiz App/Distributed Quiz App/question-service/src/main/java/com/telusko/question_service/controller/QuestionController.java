@@ -62,6 +62,7 @@ public class QuestionController {
         }
     }
 
+    @PostMapping("getScore")
     public ResponseEntity<Integer> getScore(@RequestBody List<QuizResponse> responses) {
         try {
             Integer ans = questionService.getScore(responses);
