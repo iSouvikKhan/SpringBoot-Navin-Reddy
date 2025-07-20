@@ -3,8 +3,10 @@ package com.telusko.quiz_service.service;
 import com.telusko.quiz_service.dao.QuizDao;
 import com.telusko.quiz_service.dto.QuestionWrapper;
 import com.telusko.quiz_service.dto.QuizResponse;
+import com.telusko.quiz_service.feign.QuizInterface;
 import com.telusko.quiz_service.model.Quiz;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -16,57 +18,42 @@ public class QuizService {
 
     @Autowired
     QuizDao quizDao;
-//    @Autowired
-//    QuestionDao questionDao;
+
+    @Autowired
+    QuizInterface quizInterface;
 
     public Quiz createQuiz(String category, Integer numQ, String title) {
-//        try {
-//            List<Question> questions = questionDao.findRandomQuestionsByCategory(category, numQ);
-//
-//            Quiz quiz = new Quiz();
-//            quiz.setTitle(title);
-//            quiz.setQuestions(questions);
-//
-//            return quizDao.save(quiz);
-//        } catch(Exception ex) {
-//            return null;
-//        }
+        try {
+            // call generate url
+            List<Integer> questions = quizInterface.getQuestionsForQuiz(category, numQ).getBody();
 
-        return null;
+            Quiz quiz = new Quiz();
+            quiz.setTitle(title);
+            quiz.setQuestionIds(questions);
+
+            return quizDao.save(quiz);
+        } catch(Exception ex) {
+            return null;
+        }
     }
 
     public List<QuestionWrapper> getQuizQuestions(Integer id) {
-//        try {
-//            Optional<Quiz> quiz = quizDao.findById(id);
-//            List<Question> question = quiz.get().getQuestions();
-//            List<QuestionWrapper> questionWrapper = new ArrayList<>();
-//            for(Question qs : question) {
-//                QuestionWrapper qw = new QuestionWrapper(qs.getId(), qs.getQuestionTitle(), qs.getOption1(), qs.getOption2(), qs.getOption3(), qs.getOption4());
-//                questionWrapper.add(qw);
-//            }
-//            return questionWrapper;
-//        } catch (Exception ex) {
-//            return null;
-//        }
-
-        return null;
+        try {
+            Quiz quiz = quizDao.findById(id).get();
+            List<Integer> questionIds = quiz.getQuestionIds();
+            ResponseEntity<List<QuestionWrapper>> questionWrapper = quizInterface.getQuestionsFromId(questionIds);
+            var asd = questionWrapper.getBody();
+            return asd;
+        } catch (Exception ex) {
+            return null;
+        }
     }
 
     public Integer calculateResult(Integer id, List<QuizResponse> quizResponse) {
-//        try {
-//            Quiz quiz = quizDao.findById(id).get();
-//            List<Question> questions = quiz.getQuestions();
-//            int right = 0;
-//            int i = 0;
-//            for(QuizResponse res : quizResponse) {
-//                if(res.getQuizResponse().equals(questions.get(i).getRightAnswer())) right++;
-//                i++;
-//            }
-//            return right;
-//        } catch (Exception ex) {
-//            return null;
-//        }
-
-        return null;
+        try {
+            return quizInterface.getScore(quizResponse).getBody();
+        } catch (Exception ex) {
+            return null;
+        }
     }
 }

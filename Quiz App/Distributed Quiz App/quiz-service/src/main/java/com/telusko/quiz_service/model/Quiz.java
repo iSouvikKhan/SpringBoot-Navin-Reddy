@@ -2,6 +2,7 @@ package com.telusko.quiz_service.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.aspectj.weaver.patterns.TypePatternQuestions;
 
 import java.util.List;
 
@@ -13,6 +14,6 @@ public class Quiz {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String title;
-    @ManyToMany
-    private List<Question> questions;
+    @ElementCollection
+    private List<Integer> questionIds;
 }
