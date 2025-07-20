@@ -5,11 +5,11 @@ import com.telusko.question_service.dto.QuestionWrapper;
 import com.telusko.question_service.dto.QuizResponse;
 import com.telusko.question_service.model.Question;
 import com.telusko.question_service.service.QuestionService;
-import org.hibernate.cfg.Environment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.core.env.Environment;
 
 import java.util.List;
 
